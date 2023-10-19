@@ -1,0 +1,6 @@
+controller\Controller.class
+model\BatchDAO.class
+controller\ControllerP.class
+model\Batch.class
+model\Participant.class
+model\ParticipantDAO.class

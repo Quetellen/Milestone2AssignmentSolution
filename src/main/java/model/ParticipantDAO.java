@@ -47,7 +47,7 @@ public class ParticipantDAO {
 
 	/* CRUD READ */
 	public ArrayList<Participant> listOfParticipants() {
-		
+
 		ArrayList<Participant> participants = new ArrayList<>();
 		String read = "SELECT * FROM participants ORDER BY PNAME";
 
@@ -55,15 +55,15 @@ public class ParticipantDAO {
 			Connection con = connect();
 			PreparedStatement pst = con.prepareStatement(read);
 			ResultSet rs = pst.executeQuery();
-			// O laco sera executado enquanto houver contatos
+
 			while (rs.next()) {
-				// variaveis de apoio que receberm os dados do banco
+
 				String p_id = rs.getString(1);
 				String pname = rs.getString(2);
 				String phone = rs.getString(3);
 				String email = rs.getString(4);
 				String b_id = rs.getString(5);
-				// populando o Array list
+
 				participants.add(new Participant(p_id, pname, phone, email, b_id));
 
 			}
@@ -76,9 +76,9 @@ public class ParticipantDAO {
 
 		}
 	}
-	
-	/*CRUD UPDATE*/
-	
+
+	/* CRUD UPDATE */
+
 	public void selectParticipants(Participant participant) {
 		String read2 = "SELECT * FROM participants WHERE p_id = ?";
 		try {
@@ -87,7 +87,7 @@ public class ParticipantDAO {
 			pst.setString(1, participant.getP_id());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next()) {
-				// setar as variaveis bacth
+
 				participant.setP_id(rs.getString(1));
 				participant.setPname(rs.getString(2));
 				participant.setPhone(rs.getString(3));
@@ -99,7 +99,7 @@ public class ParticipantDAO {
 			System.out.println(e);
 		}
 	}
-	
+
 	public void updateParticipants(Participant participant) {
 		String create = "UPDATE participants SET pname=?, phone=?,email=?, b_id=? WHERE p_id=?";
 		try {
@@ -116,9 +116,9 @@ public class ParticipantDAO {
 			System.out.println(e);
 		}
 	}
-	
-	/*CRUD DELETE*/
-	
+
+	/* CRUD DELETE */
+
 	public void deleteParticipant(Participant participant) {
 		String delete = "DELETE FROM participants WHERE p_id=?";
 		try {
@@ -131,5 +131,5 @@ public class ParticipantDAO {
 			System.out.println(e);
 		}
 	}
-	
+
 }

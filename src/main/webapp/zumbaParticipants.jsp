@@ -29,7 +29,9 @@ ArrayList<Participant> list = (ArrayList<Participant>) request.getAttribute("par
 			</tr>
 		</thead>
 		<tbody>
-			<%for (int i = 0 ; i < list.size(); i++){ %>
+			<%
+			for (int i = 0; i < list.size(); i++) {
+			%>
 			<tr>
 				<td><%=list.get(i).getP_id()%></td>
 				<td><%=list.get(i).getPname()%></td>
@@ -37,10 +39,11 @@ ArrayList<Participant> list = (ArrayList<Participant>) request.getAttribute("par
 				<td><%=list.get(i).getEmail()%></td>
 				<td><%=list.get(i).getB_id()%></td>
 				<td><a href="selectp?p_id=<%=list.get(i).getP_id()%>"
-					class="button1"> Update </a> 
-					<a href="javascript: confirmp(<%=list.get(i).getP_id()%>)"
-					class="button2"> Delete </a> 
-				<%} %>
+					class="button1"> Update </a> <a
+					href="javascript: confirmp(<%=list.get(i).getP_id()%>)"
+					class="button2"> Delete </a> <%
+ }
+ %>
 		</tbody>
 	</table>
 	<script src="scripts/validateDeletionP.js"></script>

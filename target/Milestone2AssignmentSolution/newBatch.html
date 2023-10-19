@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Zumba Classes</title>
+	<link rel="icon" href="pictures/faviconzumba.png">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<h1>Create a New Batch</h1>
+	<form name="frmBatch" action="insert">
+		<table>
+			<tr>
+				<td><input type="text" name="name" placeholder="Batch Name" class="box2"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="startTime" placeholder="Start Time" class="box1"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="endTime" placeholder="End Time" class="box1"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="shift" placeholder="AM/PM" class="box1"></td>
+			</tr>
+		</table>
+		<input type="button" value="Add" class="button" onclick="validate()">
+	</form>
+	<script src="scripts/validate.js"></script>
+</body>
+
+</html>

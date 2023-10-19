@@ -4,13 +4,6 @@
 <%@ page import="java.util.ArrayList"%>
 <%
 ArrayList<Batch> list = (ArrayList<Batch>) request.getAttribute("batch");
-//for (int i = 0; i < list.size(); i++){
-//out.println(list.get(i).getB_id());
-//out.println(list.get(i).getName());
-//out.println(list.get(i).getStartTime());
-//out.println(list.get(i).getEndTime());
-//out.println(list.get(i).getShift());
-//}
 %>
 <!DOCTYPE html>
 <html>
