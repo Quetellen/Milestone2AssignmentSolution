@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Zumba Classes</title>
+	<link rel="icon" href="pictures/faviconzumba.png">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<h1>Create a Participant</h1>
+	<form name="frmParticipant" action="insertp">
+		<table>
+			<tr>
+				<td><input type="text" name="pname" placeholder="Participant Name" class="box2"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="phone" placeholder="Phone" class="box2"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="email" placeholder="Email" class="box2"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="b_id" placeholder="Batch Id" class="box1"></td>
+			</tr>
+		</table>
+		<input type="button" value="Add" class="button" onclick="validatep()">
+	</form>
+	<script src="scripts/validateP.js"></script>
+</body>
+
+</html>
